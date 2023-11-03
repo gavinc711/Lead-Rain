@@ -14,15 +14,17 @@ public class PlayerBehavior : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public float horizontalScreenLimit;
-    public float verticalScreenLimit;
+    public float verticalScreenLimitPositive;
+	public float verticalScreenLimitNegative;
     public GameObject bulletPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 4f;
-        horizontalScreenLimit = 9.5f;
-        verticalScreenLimit = 6.5f;
+        speed = 8f;
+        horizontalScreenLimit = 13.5f;
+        verticalScreenLimitPositive = 1f;
+		verticalScreenLimitNegative = -4f;
     }
 
     // Update is called once per frame; if your computer runs at 60 fps
@@ -37,22 +39,26 @@ public class PlayerBehavior : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * Time.deltaTime * speed);
-        if (transform.position.x > horizontalScreenLimit || transform.position.x < -horizontalScreenLimit)
-        {
-            transform.position = new Vector3(-horizontalScreenLimit, transform.position.y, 0);
-        }
-        else if (transform.position.x < -horizontalScreenLimit)
+		
+		//If x position is greater than horizontal screen limit, stop there.
+        if (transform.position.x > horizontalScreenLimit)
         {
             transform.position = new Vector3(horizontalScreenLimit, transform.position.y, 0);
         }
-
-        if (transform.position.y > verticalScreenLimit)
+		//If x position is less than horizontal screen limit, stop there.
+        else if (transform.position.x < -horizontalScreenLimit)
         {
-            transform.position = new Vector3(transform.position.x, -verticalScreenLimit, 0);
+            transform.position = new Vector3(-horizontalScreenLimit, transform.position.y, 0);
         }
-        else if (transform.position.y < -verticalScreenLimit)
+		//If y position is greater than vertical screen limit, stop there.
+        if (transform.position.y > verticalScreenLimitPositive)
         {
-            transform.position = new Vector3(transform.position.x, verticalScreenLimit, 0);
+            transform.position = new Vector3(transform.position.x, verticalScreenLimitPositive, 0);
+        }
+		//If y position is less than vertical screen limit, stop there.
+        else if (transform.position.y < verticalScreenLimitNegative)
+        {
+            transform.position = new Vector3(transform.position.x, verticalScreenLimitNegative, 0);
         }
     }
 
