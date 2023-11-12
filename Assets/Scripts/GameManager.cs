@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         CreateSky();
         InvokeRepeating("CreateEnemyOne", 1.0f, 3.0f);
         InvokeRepeating("CreateEnemyTwo", 1.0f, 4.0f);
+
 		cloudsMove = 1;
         score = 0;
 		lifeCount = 3;
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(enemyOnePrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
     }
-	
+
     void CreateEnemyTwo()
     {
         Instantiate(enemyTwoPrefab, new Vector3(Random.Range(-8, 8), 7, 0), Quaternion.identity);
