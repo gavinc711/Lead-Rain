@@ -106,7 +106,11 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
+<<<<<<< HEAD
   Priority: 2
+=======
+  Priority: 128
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

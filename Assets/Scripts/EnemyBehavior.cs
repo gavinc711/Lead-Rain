@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
+<<<<<<< HEAD
     public GameObject explosionPrefab;
 	public GameObject gM;
+=======
+
+    public GameObject explosionPrefab;
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         gM = GameObject.Find("GameManager");
+=======
+        
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
     }
 
     // Update is called once per frame
@@ -23,6 +32,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if(whatIHit.tag == "Player")
         {
+<<<<<<< HEAD
 			if (whatIHit.GetComponent<PlayerBehavior>().shield.activeInHierarchy == true)
 			{
 				Instantiate(explosionPrefab, transform.position, Quaternion.identity);
@@ -36,6 +46,11 @@ public class EnemyBehavior : MonoBehaviour
 				Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 				Destroy(this.gameObject);
 			}
+=======
+			whatIHit.GetComponent<PlayerBehavior>().LoseLife();
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
         }
         else if (whatIHit.tag == "Weapon")
         {

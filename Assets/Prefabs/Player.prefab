@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1 &2874951971416609451
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +213,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+=======
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
 --- !u!1 &7679923546515127593
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,9 +246,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD
   m_Children:
   - {fileID: 3149353706567216584}
   - {fileID: 4585383994541704497}
+=======
+  m_Children: []
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -315,12 +322,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1270770369424992232, guid: 7c3165618d685f14aa08913396fe3d59, type: 3}
   explosionPrefab: {fileID: 3212518171095925168, guid: 6ea577cb457dfba4f9690e308c38cf38, type: 3}
+<<<<<<< HEAD
   thruster: {fileID: 2874951971416609451}
   shield: {fileID: 7027118715382099651}
   coinSound: {fileID: 8300000, guid: e3bba090f5ebcd142bca548d26aee798, type: 3}
   healthSound: {fileID: 8300000, guid: 31e1b2fce3914be44a04812ab31a2df3, type: 3}
   powerupSound: {fileID: 8300000, guid: 863ec5fa4f4c9c04aae6d689f00547b3, type: 3}
   powerdownSound: {fileID: 8300000, guid: ac5928f8fd92b7a4e8fc2b4cff1ddddc, type: 3}
+=======
+>>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
   speed: 0
   lives: 0
 --- !u!58 &6657653046182204745
