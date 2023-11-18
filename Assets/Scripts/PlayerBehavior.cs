@@ -8,7 +8,6 @@ public class PlayerBehavior : MonoBehaviour
 {
 	public GameObject bulletPrefab;
 	public GameObject explosionPrefab;
-<<<<<<< HEAD
 	public GameObject thruster;
 	public GameObject shield;
 	public AudioClip coinSound;
@@ -21,26 +20,16 @@ public class PlayerBehavior : MonoBehaviour
     private float horizontalScreenLimit = 13.5f;
     private float verticalScreenLimit = 4f;
 	private bool betterWeapon;
-=======
-    public float speed;
-    private float horizontalScreenLimit = 13.5f;
-    private float verticalScreenLimit = 4f;
-	private GameObject gM;
->>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
-
+ 
     // Start is called before the first frame update
     void Start()
     {
 		gM = GameObject.Find("GameManager");
-<<<<<<< HEAD
 		speed = 6f;
 		lives = 3;
 		betterWeapon = false;
 		thruster.SetActive(false);
 		shield.SetActive(false);
-=======
-		speed = 8f;
->>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
     }
 
     // Update is called once per frame; if your computer runs at 60 fps
@@ -92,31 +81,17 @@ public class PlayerBehavior : MonoBehaviour
 	
 	public void LoseLife()
     {
-<<<<<<< HEAD
         lives--;
 		gM.GetComponent<GameManager>().LivesChange(lives);
-=======
-		int lives = gM.GetComponent<GameManager>().lifeCount;
-		TextMeshProUGUI count = gM.GetComponent<GameManager>().livesText;
-		
-        lives--;
-		count.text = "Lives: " + lives;
-		gM.GetComponent<GameManager>().lifeCount = lives;
->>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
 		
         if (lives <= 0) 
         {
             //Game Over
-<<<<<<< HEAD
 			gM.GetComponent<GameManager>().GameOver();
-=======
-			GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
->>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
-<<<<<<< HEAD
 	
 	private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -184,6 +159,4 @@ public class PlayerBehavior : MonoBehaviour
         betterWeapon = false;
         gM.GetComponent<GameManager>().PowerupChange("No Powerup");
     }
-=======
->>>>>>> 88c8a73503714f31ac41a3a4e89aa566c3c880a6
 }
