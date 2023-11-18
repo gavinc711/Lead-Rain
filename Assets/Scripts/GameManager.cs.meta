@@ -8,6 +8,7 @@ MonoImporter:
   - enemyOnePrefab: {fileID: 8997457525734203288, guid: 5550b8d7b1f8cba429c750e3e6de47e8, type: 3}
   - enemyTwoPrefab: {fileID: 1772501088048143204, guid: ab33f1dca64c7834da1bef4bc1351a36, type: 3}
   - cloudPrefab: {fileID: 7221467765601026363, guid: 2d4846f5163953643a28d3504e8bf67c, type: 3}
+  - coinPrefab: {fileID: 2084718091344083507, guid: bfa857c1e6e270047be2a1d98843eb1c, type: 3}
   - scoreText: {instanceID: 0}
   - livesText: {instanceID: 0}
   executionOrder: 0
